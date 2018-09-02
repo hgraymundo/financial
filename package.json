@@ -2,7 +2,7 @@
   "name": "financial",
   "version": "0.0.1",
   "description": "Financial Project",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/hgraymundo/financial/issues"
   },
-  "homepage": "https://github.com/hgraymundo/financial#readme"
+  "homepage": "https://github.com/hgraymundo/financial#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7"
+  }
 }
