@@ -1,5 +1,6 @@
 'use strict'
 var express     = require('express')
+,    exphbs        = require('express-handlebars')
 ,   app         = express()
 ,   router      = express.Router()
 ,   mysql       = require('mysql')
@@ -15,6 +16,9 @@ var express     = require('express')
 // app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 // app.set('view engine', 'handlebars');
 
+app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
+app.set('view engine', '.hbs');
+
 
 
 // app.use(morgan('combined'));
@@ -27,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use(validator());
 
 app.get('/', function(req, res) {
-    res.json({ message: 'Welcome to Financial API'});
+    res.render('index')
 });
 
 
